@@ -1,0 +1,8 @@
+build-unoswitchergui-Desktop*
+*.pro.user
+switch.cfg
+unoswitchergui.app
+moc_*
+*.o
+qrc*
+Makefile

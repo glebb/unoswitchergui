@@ -1,0 +1,3 @@
+[submodule "lib/UnotellyCliSwitcher"]
+	path = lib/UnotellyCliSwitcher
+	url = https://github.com/VilleSalonen/UnotellyCliSwitcher.git
