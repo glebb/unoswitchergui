@@ -1,3 +1,4 @@
+cache()
 # Add more folders to ship with the application, here
 folder_01.source = qml/unoswitchergui
 folder_01.target = qml
@@ -28,7 +29,27 @@ HEADERS += \
 RESOURCES += \
     resources.qrc
 
-QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.6
+defineTest(copyToDestdir) {
+    files = $$1
+
+    for(FILE, files) {
+        DDIR = $$DESTDIR
+
+        # Replace slashes in paths with backslashes for Windows
+        win32:FILE ~= s,/,\\,g
+        win32:DDIR ~= s,/,\\,g
+
+        QMAKE_POST_LINK += $$QMAKE_COPY $$quote($$FILE) $$quote($$DDIR) $$escape_expand(\\n\\t)
+    }
+
+    export(QMAKE_POST_LINK)
+}
+
+!mac {
+    copyToDestdir($$PWD/lib/UnotellyCliSwitcher/switch.js)
+    copyToDestdir($$PWD/lib/UnotellyCliSwitcher/switch.cfg)
+}
+
 mac {
     QMAKE_MACOSX_DEPLOYMENT_TARGET = 10.6
     UnotellyCliSwitcher.files += lib/UnotellyCliSwitcher/switch.js

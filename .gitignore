@@ -6,3 +6,4 @@ moc_*
 *.o
 qrc*
 Makefile
+.qmake.cache
