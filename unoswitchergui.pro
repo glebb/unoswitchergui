@@ -33,21 +33,21 @@ defineTest(copyToDestdir) {
     files = $$1
 
     for(FILE, files) {
-        DDIR = $$DESTDIR
+        DDIR = /home/antti/src/build-unoswitchergui-Desktop_Qt_5_1_1_GCC_32bit-Debug
 
         # Replace slashes in paths with backslashes for Windows
         win32:FILE ~= s,/,\\,g
         win32:DDIR ~= s,/,\\,g
 
-        QMAKE_POST_LINK += $$QMAKE_COPY $$quote($$FILE) $$quote($$DDIR) $$escape_expand(\\n\\t)
+        QMAKE_PRE_LINK += $$QMAKE_COPY $$quote($$FILE) $$quote($$DDIR) $$escape_expand(\\n\\t)
     }
 
-    export(QMAKE_POST_LINK)
+    export(QMAKE_PRE_LINK)
 }
 
 !mac {
-    copyToDestdir($$PWD/lib/UnotellyCliSwitcher/switch.js)
-    copyToDestdir($$PWD/lib/UnotellyCliSwitcher/switch.cfg)
+    copyToDestdir($${PWD}/lib/UnotellyCliSwitcher/switch.js)
+    copyToDestdir($${PWD}/lib/UnotellyCliSwitcher/switch.cfg)
 }
 
 mac {
