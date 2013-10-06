@@ -17,6 +17,7 @@ private:
 
 public slots:
     void finished(int retValue);
+    void error(QProcess::ProcessError error);
 
 signals:
     void actionFinished(int retValue, const QString output);
