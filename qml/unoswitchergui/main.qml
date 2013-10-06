@@ -4,13 +4,24 @@ import QtQuick.Controls 1.0
 Rectangle {
     width: 670
     height: 500
-    color: "#808080"
+    gradient: Gradient {
+        GradientStop {
+            position: 0.19
+            color: "#273b51"
+        }
+
+        GradientStop {
+            position: 1
+            color: "#ffffff"
+        }
+    }
 
     Item {
         Connections {
             target: scriptLauncher
             onActionFinished: {
                 waitNoteImage.visible = false
+                animation.stop()
                 labelOutput.text = output
             }
         }
@@ -24,6 +35,8 @@ Rectangle {
         height: 58
         wrapMode: Text.WordWrap
         text: "Click flag to change netflix country."
+        verticalAlignment: Text.AlignVCenter
+        horizontalAlignment: Text.AlignHCenter
     }
 
     Image {
@@ -161,7 +174,7 @@ Rectangle {
     Image {
         id: netflix
         x: 25
-        y: 8
+        y: 16
         width: 620
         height: 250
         source: "img/netflix.gif"
@@ -179,6 +192,7 @@ Rectangle {
         anchors.centerIn: parent
         source: "img/WaitNote.png"
         NumberAnimation on rotation {
+            id: animation
             loops: Animation.Infinite
             from: 0
             to: 360
