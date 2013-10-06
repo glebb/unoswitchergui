@@ -29,7 +29,6 @@ HEADERS += \
 RESOURCES += \
     resources.qrc
 
-DESTDIR = build
 
 defineTest(copyToDestdir) {
     files = $$1
@@ -48,6 +47,7 @@ defineTest(copyToDestdir) {
 }
 
 !mac {
+    DESTDIR = build
     copyToDestdir($${PWD}/lib/UnotellyCliSwitcher/switch.js)
     copyToDestdir($${PWD}/lib/UnotellyCliSwitcher/switch.cfg)
 }
