@@ -29,11 +29,13 @@ HEADERS += \
 RESOURCES += \
     resources.qrc
 
+DESTDIR = build
+
 defineTest(copyToDestdir) {
     files = $$1
 
     for(FILE, files) {
-        DDIR = /home/antti/src/build-unoswitchergui-Desktop_Qt_5_1_1_GCC_32bit-Debug
+        DDIR = $$DESTDIR
 
         # Replace slashes in paths with backslashes for Windows
         win32:FILE ~= s,/,\\,g

@@ -7,3 +7,4 @@ moc_*
 qrc*
 Makefile
 .qmake.cache
+build
