@@ -3,7 +3,7 @@
 #include <QDir>
 #include <QtGui/QGuiApplication>
 
-ScriptLauncher::ScriptLauncher()
+ScriptLauncher::ScriptLauncher(QObject *parent) : QObject(parent)
 {
     this->m_process = new QProcess(this);
     this->m_process->setProcessChannelMode(QProcess::MergedChannels);

@@ -9,7 +9,7 @@ class ScriptLauncher : public QObject
     Q_OBJECT
 
 public:
-    ScriptLauncher();
+    ScriptLauncher(QObject *parent=0);
     Q_INVOKABLE void launchscript(QString param);
 
 private:

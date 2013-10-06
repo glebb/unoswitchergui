@@ -28,200 +28,134 @@ Rectangle {
 
     Image {
         id: usa
+        objectName: "USA"
         x: 62
         y: 283
         width: 100
         height: 60
         sourceSize.width: 100
         source: "img/united-states-flag-small.gif"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                labelOutput.text = ""
-                waitNoteImage.visible = true
-                scriptLauncher.launchscript("USA")
-            }
-        }
+        SwitcherMouseArea {}
     }
 
     Image {
         id: finland
+        objectName: "FIN"
         x: 172
         y: 283
         width: 100
         height: 60
         sourceSize.width: 100
         source: "img/finland-flag-small.gif"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                labelOutput.text = ""
-                waitNoteImage.visible = true
-                scriptLauncher.launchscript("FIN")
-            }
-        }
+        SwitcherMouseArea {}
     }
 
     Image {
         id: gbr
+        objectName: "GBR"
         x: 282
         y: 283
         width: 100
         height: 60
         sourceSize.width: 100
         source: "img/united-kingdom-flag-small.gif"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                labelOutput.text = ""
-                waitNoteImage.visible = true
-                scriptLauncher.launchscript("GBR")
-            }
-        }
+        SwitcherMouseArea {}
     }
 
     Image {
         id: canada
+        objectName: "CAN"
         x: 392
         y: 283
         width: 100
         height: 60
         sourceSize.width: 100
         source: "img/canada-flag-small.gif"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                labelOutput.text = ""
-                waitNoteImage.visible = true
-                scriptLauncher.launchscript("CAN")
-            }
-        }
+        SwitcherMouseArea {}
     }
 
     Image {
         id: mexico
+        objectName: "MEX"
         x: 502
         y: 283
         width: 100
         height: 60
         sourceSize.width: 100
         source: "img/mexico-flag-small.gif"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                labelOutput.text = ""
-                waitNoteImage.visible = true
-                scriptLauncher.launchscript("MEX")
-            }
-        }
+        SwitcherMouseArea {}
     }
 
     Image {
         id: denmark
+        objectName: "DNK"
         x: 8
         y: 359
         width: 100
         height: 60
         sourceSize.width: 100
         source: "img/denmark-flag-small.gif"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                labelOutput.text = ""
-                waitNoteImage.visible = true
-                scriptLauncher.launchscript("DNK")
-            }
-        }
+        SwitcherMouseArea {}
     }
 
     Image {
         id: ireland
+        objectName: "IRL"
         x: 118
         y: 359
         width: 100
         height: 60
         sourceSize.width: 100
         source: "img/ireland-flag-small.gif"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                labelOutput.text = ""
-                waitNoteImage.visible = true
-                scriptLauncher.launchscript("IRL")
-            }
-        }
+        SwitcherMouseArea {}
     }
 
     Image {
         id: netherlands
+        objectName: "NLD"
         x: 228
         y: 359
         width: 100
         height: 60
         sourceSize.width: 100
         source: "img/netherlands-flag-small.gif"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                labelOutput.text = ""
-                waitNoteImage.visible = true
-                scriptLauncher.launchscript("NLD")
-            }
-        }
+        SwitcherMouseArea {}
     }
 
     Image {
         id: norway
+        objectName: "NOR"
         x: 338
         y: 359
         width: 100
         height: 60
         sourceSize.width: 100
         source: "img/norway-flag-small.gif"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                labelOutput.text = ""
-                waitNoteImage.visible = true
-                scriptLauncher.launchscript("NOR")
-            }
-        }
+        SwitcherMouseArea {}
     }
 
     Image {
         id: sweden
+        objectName: "SWE"
         x: 448
         y: 359
         width: 100
         height: 60
         sourceSize.width: 100
         source: "img/sweden-flag-small.gif"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                labelOutput.text = ""
-                waitNoteImage.visible = true
-                scriptLauncher.launchscript("SWE")
-            }
-        }
+        SwitcherMouseArea {}
     }
 
     Image {
         id: brazil
+        objectName: "BRA"
         x: 558
         y: 359
         width: 100
         height: 60
         sourceSize.width: 100
         source: "img/brazil-flag-small.gif"
-        MouseArea {
-            anchors.fill: parent
-            onClicked: {
-                labelOutput.text = ""
-                waitNoteImage.visible = true
-                scriptLauncher.launchscript("BRA")
-            }
-        }
+        SwitcherMouseArea {}
     }
 
     Image {
